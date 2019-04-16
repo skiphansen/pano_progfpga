@@ -4,7 +4,7 @@ This project updates the Xilinx image embedded in the Panologic's progfpga progr
 
 Why?
 
-Using a JTAG or SPI programmer to update the flash in a Pano requires the investment in a programmer and requires disassembling the Pano to gain access to the programming connectors.  Sometimes a more convenient method is handy.
+Using a JTAG or SPI programmer to update the flash in a Pano requires an investment in a programmer and requires disassembling the Pano to gain access to the programming connectors.  Sometimes a more convenient method is handy.
 
 If you are one of those that picked up a Pano but never got around to doing anything with it now is your chance.  Dig your Pano out of your garage, checkout [Tom's Raytracer](https://github.com/tomverbeure/rt), or my [pano_man](https://github.com/skiphansen/pano_man) or one of the other pano projects and give it a try.
 
@@ -20,9 +20,9 @@ The first generation (G1) Pano was based on the largest Xilinx Spartan-3E family
 
 The second generation (G2) supported two DVI monitors. Revision A and B of the G2 devices were based on the Spartan-6 LX150 which is the largest chip in the family.  The revision C G2 device is based on the smaller LX100 device which is still quite large by hobbist standards.
 
-Unfortunately for Pano Logic, but fortunate for FPGA hobbists Pano Logic when out of business in 2012.  Shortly thereafter **TONS** of both new and used Pano Logic devices started showing up on ebay for very little money since they were pretty much useless without support.  Even today (April 2019) both versions of the Paro Logic devices are still  readily available on ebay for little.
+Unfortunately for Pano Logic, but fortunate for FPGA hobbists Pano Logic when out of business in 2012.  Shortly thereafter **TONS** of both new and used Pano Logic devices started showing up on ebay for very little money since they were pretty much useless without support.  Even today (April 2019) both versions of the Pano Logic devices are still  readily available on ebay for little.
 
-Tom Verbeure has spent a lot of time reverse engineering the Paro Logic devices and created a absolute mind blowing raytracing demo that runs on a G1 device.  It was the [Hackaday article](https://hackaday.com/2018/12/07/racing-the-beam-on-a-thin-client-in-fpgas/) article on his project that originally attracted my attention to the Pano hacking scene.
+Tom Verbeure has spent a lot of time reverse engineering the Pano Logic devices and created a absolute mind blowing raytracing demo that runs on a G1 device.  It was the [Hackaday article](https://hackaday.com/2018/12/07/racing-the-beam-on-a-thin-client-in-fpgas/) article on his project that originally attracted my attention to the Pano hacking scene.
 
 Tom's article also got the attention of Wenting Zhang who added support for the G1's SDRAM and USB controller as well as making it possible to execute code on a soft processor directly from the SPI flash.  I can't wait until he finishes porting his [Verilog Boy](https://hackaday.io/project/57660-verilogboy-gameboy-on-fpga) project to the Pano.
 
@@ -119,7 +119,7 @@ skip@dell-790:~/pano/working/pano_progfpga$
 ## Preparing a binary image
 We need a **BINARY** fpaga image (not a .bit file) for progfpga.  One can be created at the same time as the .bit file by checking the *Create Binary Configuration File* option in process properties the for the Generate Programming File process.
 
-![](./assets/impact.png) .
+![](./assets/impact.png)
 
 After running the *Generate Programming File* process a .bin file should be created in the same subdirectory as the .bit file.
 ## Background
@@ -152,17 +152,28 @@ Knowing this we can calculate that we need to patch offset 0x8143c40 - 0x08143c0
 
 All that remained was writing a program to update the updater with a new image.
 
+## Do do
+1. Add support for the series2 Pano.
+
+
 ## Pano Links
 
 [Original Hackaday](https://hackaday.com/2013/01/11/ask-hackaday-we-might-have-some-fpgas-to-hack/) article from 2013.
+
 Hackady article on Tom's [Raytracker](https://hackaday.com/2018/12/07/racing-the-beam-on-a-thin-client-in-fpgas/).
+
 Hackaday article on my [Pacman](https://hackaday.com/2019/01/11/pac-man-fever-comes-to-the-pano-logic-fpga/) project.
+
 Hackaday article on Tom's [Joystick adapter](https://hackaday.com/2019/02/11/two-joysticks-talk-to-fpga-arcade-game-over-a-vga-cable/).
 
 G1 reverese engineering information:
+
 https://github.com/tomverbeure/panologic
+
 G1 [Schematics!](https://github.com/twj42/PanoLogicG2_ReverseEngineering/blob/master/files/G1_Schematics.zip)
 
 G2 reverse engineering information:
+
 https://github.com/tomverbeure/panologic-g2
+
 https://twj42.github.io/PanoLogicG2_ReverseEngineering/
