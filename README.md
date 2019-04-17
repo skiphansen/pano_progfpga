@@ -6,7 +6,7 @@ Why?
 
 Using a JTAG or SPI programmer to update the flash in a Pano requires an investment in a programmer and requires disassembling the Pano to gain access to the programming connectors.  Sometimes a more convenient method is handy.
 
-If you are one of those that picked up a Pano but never got around to doing anything with it now is your chance.  Dig your Pano out of your garage, checkout [Tom's Raytracer](https://github.com/tomverbeure/rt), or my [pano_man](https://github.com/skiphansen/pano_man) or one of the other pano projects and give it a try.
+If you are one of those that picked up a Pano but never got around to doing anything with it now is your chance.  Dig your Pano out of your garage, checkout [Tom's Raytracer](https://github.com/tomverbeure/rt/commit/b232bf83a0fc9cb548fe35ba90f26d92d998c125), or my [pano_man](https://github.com/skiphansen/pano_man) or one of the other pano projects and give it a try.
 
 While a JTAG programmer is certainly a requirement for development progfpga provides a fast and easy way to load your latest creation on to a Pano device for whatever reason.
 
