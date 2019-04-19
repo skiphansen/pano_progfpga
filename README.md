@@ -126,7 +126,7 @@ After running the *Generate Programming File* process a .bin file should be crea
 
 When Pano Logic was still alive they published a number of help videos on youtube including [this video](https://www.youtube.com/watch?v=DPkF5EisGDQ) which describes the FPGA image update process.  The 21 minute video directs one to a CentOS 4.5 Linux P2V virtual machine which amazingly was still downloadable in 2019 from [here](https://www.youtube.com/redirect?q=https%3A%2F%2Fdocs.google.com%2Ffile%2Fd%2F0B9fxMMbyahDFS3h6QnJWak9xTEE%2Fedit%3Fusp%3Dsharing&event=video_description&v=DPkF5EisGDQ&redir_token=KhUbBOXL2w_m-aFI04GCf7ckh4l8MTU1NTI3MjQxNEAxNTU1MTg2MDE0).
 
-When I downloaded and ran the VM I found a treasure load of information on the Pano as well as the update utilities described in the video. I even found some **source code!**  Apparently the VM was created from a system that has been used for developing code to burn-in and test Pano devices.
+When I downloaded and ran the VM I found a treasure load of information on the Pano as well as the update utilities described in the video. I even found some [**source code!**](./archaeology)  code!**  Apparently the VM was created from a system that has been used for developing code to burn-in and test Pano devices.
 
 Following the directions in the video I had no problem updating one of my Pano G1 devices, to the "current" Pano Logic firmware, but that wasn't my goal, I wanted to flash my own firmware. 
 
