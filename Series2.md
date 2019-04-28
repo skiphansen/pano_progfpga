@@ -280,6 +280,12 @@ skip@dell-790:~/pano/pano_progfpga$
   A: The device revision should be printed on the same stick on label as the 
      MAC address.  
 
+* Q: How do I update the Pano after I flash my bitstream?
+  A: See [g2_multiboot](./g2_multiboot) for an example of how to reconfigure
+     the device with the golden bitstream.  If JTAG is available the example
+     can be loaded via JTAG, it will reconfigure the device with the golden
+     bitstream when the Pano button is pressed.
+
 * Q: I programmed the golden bitstream but when I power cycle it's still the Pano
      bitstream.
   A: Correct!  The "multiboot" bitstream image is loaded at power up the golden
@@ -323,11 +329,11 @@ bytes or 51 erase sectors.
 | 0x000000 -> 0x000034 | multiboot header    | 52 bytes |       |
 | 0x000035 -> 0x00ffff | unused              | 63k      |   1   |
 | 0x020000 -> 0x03ffff | unused              | 128k     |       |
-| 0x040000 -> 0x36A094 | golden bitstream    | 3240k    |       |
-| 0x36A095 -> 0x36ffff | unused              | 23k      |   2   |
+| 0x040000 -> 0x36a094 | golden bitstream    | 3240k    |       |
+| 0x36a095 -> 0x36ffff | unused              | 23k      |   2   |
 | 0x370000 -> 0x37ffff | unused              | 64k      |       |
-| 0x380000 -> 0x6AA094 | multiboot bitstream | 3240k    |       |
-| 0x6AA094 -> 0x6affff | unused              | 23k      |   3   |
+| 0x380000 -> 0x6aa094 | multiboot bitstream | 3240k    |       |
+| 0x6aa094 -> 0x6affff | unused              | 23k      |   3   |
 | 0x6b0000 -> 0x7fffff | unused/unknown      | 1334k    |   4   |
 
 Notes:
