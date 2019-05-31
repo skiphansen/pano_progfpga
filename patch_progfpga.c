@@ -374,6 +374,14 @@ int main(int argc, char **argv)
             }
             break;
          }
+
+         if( Adr == PatchData[BurnType].ImageSize / 4 - 1 && Value != 0xFFFFFFFF ) {
+             printf( "overrided end of bitstream file with 0xFFFFFFFF\n" );
+
+             Value = 0xFFFFFFFF;
+             Adr = 0xFFFFFFFF;
+         }
+
       // Reverse the byte order
          cp1[0] = cp[3];
          cp1[1] = cp[2];
