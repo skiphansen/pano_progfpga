@@ -277,8 +277,9 @@ skip@dell-790:~/pano/pano_progfpga$
      If your device has a DVI connector then it is a Series 2 (G2).
      
 * Q: How can I tell what revision my devices is?
-  A: The device revision should be printed on the same stick on label as the 
-     MAC address.  
+  A: The device revision should be printed on the same stick on label as the MAC address.  
+[![](https://raw.githubusercontent.com/skiphansen/pano_blocks/master/assets/panog2_rev_c.png)]
+
 
 * Q: How do I update the Pano after I flash my bitstream?
   A: See [g2_multiboot](./g2_multiboot) for an example of how to reconfigure
@@ -321,7 +322,7 @@ Notes:
 
 The minimum erase size is 64k bytes.
 
-The size of an uncompressed xc6ls150 bitstream size is 3317908 (0x32A094) bytes
+The size of an uncompressed xc6ls100 bitstream size is 3317908 (0x32A094) bytes
 bytes or 51 erase sectors.  
 
 |     Byte address     |        usage        | size     | notes |
