@@ -294,22 +294,20 @@ skip@dell-790:~/pano/pano_progfpga$
 
 ## Series 2 rev A/B SPI memory map
 
-The minimum erase size is 128k bytes.
+The minimum erase size is 256k bytes.
 
 The size of an uncompressed xc6ls150 bitstream size is 4220212 (0x406534) 
-bytes or 33 erase sectors.  
+bytes or 17 erase sectors.  
 
 |     Byte address     |        usage        | size     | notes |
 |----------------------|---------------------|----------|-------|
 | 0x000000 -> 0x000034 | multiboot header    | 52 bytes |       |
-| 0x000035 -> 0x01ffff | unused              | 127k     |   1   |
-| 0x020000 -> 0x03ffff | unused              | 128k     |       |
+| 0x000035 -> 0x03ffff | unused              | 255k     |   1   |
 | 0x040000 -> 0x446534 | golden bitstream    | 4122k    |       |
-| 0x446535 -> 0x45ffff | unused              | 102k     |   2   |
-| 0x460000 -> 0x47ffff | unused              | 128k     |       |
+| 0x446535 -> 0x47ffff | unused              | 130k     |   2   |
 | 0x480000 -> 0x886534 | multiboot bitstream | 4122k    |       |
-| 0x886535 -> 0x89ffff | unused              | 102k     |   3   |
-| 0x8a0000 -> 0xffffff | unused/unknown      | 7552     |   4   |
+| 0x886535 -> 0x8bffff | unused              | 130k     |   3   |
+| 0x8c0000 -> 0xffffff | unused/unknown      | 722k     |   4   |
 
 Notes:
 1. This is located within the multiboot header erase sector.
@@ -353,7 +351,7 @@ well a the orignal Pano bitstream without reflashing.
 However if we're more clever it might be possible to store considerably 
 more than 3 bitstreams if we consider the following: 
 
-The uncompressed xc6ls150 bitstream with trivial complexity size of 
+The uncompressed xc6lx150 bitstream with trivial complexity size of 
 4220212 is reduced to 1152184 bytes when bitstream compression is enabled 
 in ISE.  This is essentially free, since such a compressed bitstream can 
 be loaded by the Xilinx without any additional processing.  

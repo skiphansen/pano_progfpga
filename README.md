@@ -141,30 +141,7 @@ All that remained was writing a program to update the updater with a new image.
 
 ## Pano Links
 
-[Original Hackaday](https://hackaday.com/2013/01/11/ask-hackaday-we-might-have-some-fpgas-to-hack/) 
-article from 2013.  
-
-Hackady article on Tom's [Raytracker](https://hackaday.com/2018/12/07/racing-the-beam-on-a-thin-client-in-fpgas/).  
-
-Hackaday article on my 
-[Pacman](https://hackaday.com/2019/01/11/pac-man-fever-comes-to-the-pano-logic-fpga/) 
-project.  
-
-Hackaday article on Tom's [Joystick 
-adapter](https://hackaday.com/2019/02/11/two-joysticks-talk-to-fpga-arcade-game-over-a-vga-cable/).  
-
-G1 reverese engineering information:
-
-https://github.com/tomverbeure/panologic
-
-G1 [Schematics!](https://github.com/twj42/PanoLogicG2_ReverseEngineering/blob/master/files/G1_Schematics.zip)
-
-G2 reverse engineering information:
-
-https://github.com/tomverbeure/panologic-g2
-
-https://twj42.github.io/PanoLogicG2_ReverseEngineering/
-
+Link to other Panologic information can be found [here](https://github.com/tomverbeure/panologic-g2/wiki/Panologic-links#pano-links)
 
 ## Notes
 
