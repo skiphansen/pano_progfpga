@@ -294,7 +294,7 @@ skip@dell-790:~/pano/pano_progfpga$
 
 ## Series 2 rev A/B SPI memory map
 
-16 megabyte flash with a minimum erase size is 256k bytes.
+16 megabyte flash with a minimum erase size of 256k bytes.
 
 The size of an uncompressed xc6ls150 bitstream size is 4220212 (0x406534) 
 bytes or 17 erase sectors.  
@@ -318,7 +318,7 @@ Notes:
 
 ## Series 2 rev C SPI memory map
 
-8 megabyte flash with a minimum erase size is 64k bytes.
+8 megabyte flash with a minimum erase size of 64k bytes.
 
 The size of an uncompressed xc6ls100 bitstream size is 3317908 (0x32A094) bytes
 bytes or 51 erase sectors.  
