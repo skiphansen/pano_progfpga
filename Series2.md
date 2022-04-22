@@ -294,7 +294,7 @@ skip@dell-790:~/pano/pano_progfpga$
 
 ## Series 2 rev A/B SPI memory map
 
-The minimum erase size is 256k bytes.
+16 megabyte flash with a minimum erase size is 256k bytes.
 
 The size of an uncompressed xc6ls150 bitstream size is 4220212 (0x406534) 
 bytes or 17 erase sectors.  
@@ -304,9 +304,9 @@ bytes or 17 erase sectors.
 | 0x000000 -> 0x000034 | multiboot header    | 52 bytes |       |
 | 0x000035 -> 0x03ffff | unused              | 255k     |   1   |
 | 0x040000 -> 0x446534 | golden bitstream    | 4122k    |       |
-| 0x446535 -> 0x47ffff | unused              | 130k     |   2   |
+| 0x446535 -> 0x47ffff | unused              | 230k     |   2   |
 | 0x480000 -> 0x886534 | multiboot bitstream | 4122k    |       |
-| 0x886535 -> 0x8bffff | unused              | 130k     |   3   |
+| 0x886535 -> 0x8bffff | unused              | 230k     |   3   |
 | 0x8c0000 -> 0xffffff | unused/unknown      | 722k     |   4   |
 
 Notes:
@@ -318,7 +318,7 @@ Notes:
 
 ## Series 2 rev C SPI memory map
 
-The minimum erase size is 64k bytes.
+8 megabyte flash with a minimum erase size is 64k bytes.
 
 The size of an uncompressed xc6ls100 bitstream size is 3317908 (0x32A094) bytes
 bytes or 51 erase sectors.  
@@ -361,5 +361,3 @@ to store gzip'ed bitstream in flash it would be possible to store a lot
 more bitstreams but code running on a softcore would have to decompress 
 the bitstream and write it into flash in order for the Xilinx to be able 
 to load it.  
-
-
