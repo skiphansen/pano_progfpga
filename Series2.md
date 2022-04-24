@@ -307,13 +307,14 @@ bytes or 17 erase sectors.
 | 0x446535 -> 0x47ffff | unused              | 230k     |   2   |
 | 0x480000 -> 0x886534 | multiboot bitstream | 4122k    |       |
 | 0x886535 -> 0x8bffff | unused              | 230k     |   3   |
-| 0x8c0000 -> 0xffffff | unused/unknown      | 722k     |   4   |
+| 0x8c0000 -> 0x8fffff | unused/unknown      | 128k     |   4   |
+| 0x900000 -> 0xffffff | unused              | 594k     |       |
 
 Notes:
 1. This is located within the multiboot header erase sector.
 2. This is located within a golden bitstream erase sector.
 3. This is located within a multiboot bitstream erase sector.
-4. This region MAY contain non bitstream information such as the MAC address.
+4. This region contains 232 bytes of mostly unknown data.  The last 3 bytes of the devices MAC address appear to be at 0x8c000d.  Comparing two Panos with the same revision firmware shows 5 bytes that are different ignorning the MAC address.
 
 
 ## Series 2 rev C SPI memory map
