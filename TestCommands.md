@@ -46,9 +46,9 @@ A version of the source from some/most/all of these test appear to be in [tnptes
 |vgaPatternTest||
 |dhcpStart||
 |discover||
-|attoButton||
+|attoButton| Program just segfaults when target is a G2 Rev B |
 |oobBasic||
-|[resetOutTest]((https://github.com/skiphansen/pano_progfpga/blob/master/TestCommands.md#resetIytTest))| Pano reset, bitstream reloaded |
+|[resetOutTest](https://github.com/skiphansen/pano_progfpga/blob/master/TestCommands.md#resetIytTest)| Pano reset |
 |randnumgen||
 |[chipIdRd](https://github.com/skiphansen/pano_progfpga/blob/master/TestCommands.md#chipidrd)| Read and display Board type, FPGA Major Major and Minor Rev |
 |flashfpga||
@@ -61,7 +61,7 @@ A version of the source from some/most/all of these test appear to be in [tnptes
 |ledTest||
 |ledGreenBlue| Start LED alternating beteen green and blue |
 |spiledburn||
-|buttontest||
+|buttontest| Asks user to press button 3 times, test passes if 6 button state changes are seen |
 |audioButtonTest||
 |spiUserErase||
 |spiledbutt||
@@ -179,7 +179,9 @@ Test has PASSED
 
 ## resetOutTest
 
-Resets the Pano causing the bitstream to be reloaded.
+Resets the Pano causing the current bitstream to be reloaded?  Note this is NOT the same as a power on reset.
+I was testing a golden image and the command appeared to cause the bitstream to reload, at least a new DHCP
+cycle occurred.  I had a custom multiboot image and it was NOT started until I power cycled the Pano.
 
 ```
 Running Test = resetOutTest
