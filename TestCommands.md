@@ -48,7 +48,7 @@ A version of the source from some/most/all of these test appear to be in [tnptes
 |discover||
 |attoButton||
 |oobBasic||
-|resetOutTest||
+|[resetOutTest]((https://github.com/skiphansen/pano_progfpga/blob/master/TestCommands.md#resetIytTest))| Pano reset, bitstream reloaded |
 |randnumgen||
 |[chipIdRd](https://github.com/skiphansen/pano_progfpga/blob/master/TestCommands.md#chipidrd)| Read and display Board type, FPGA Major Major and Minor Rev |
 |flashfpga||
@@ -175,5 +175,22 @@ I2C READ EDID Table @ offset 00000074: 0x3030304b
 I2C READ EDID Table @ offset 00000078: 0x0a313030
 I2C READ EDID Table @ offset 0000007c: 0xf6002020
 Test has PASSED
+```
+
+## resetOutTest
+
+Resets the Pano causing the bitstream to be reloaded.
+
+```
+Running Test = resetOutTest
+Client connected : IP Addr = 192.168.123.118:8321
+READ CFG reg 0: 0x08010000
+TESTING with board Type = SERIES_II
+FPGA Major Rev = 0801, Minor Rev = 0014
+Keeping USB at reset!
+Asserting board reset, and loosing the client...
+Test has PASSED
+Disconnecting audio...
+Disconnected
 ```
 
