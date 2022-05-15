@@ -1,4 +1,4 @@
-# Test Commands Available Progfpga
+# Test Commands Available in Progfpga
 
 The progfpga_multiboot and progfpga_golden versions of progfpga also include a 
 large number of test command which can be run with a command line in the format of 
