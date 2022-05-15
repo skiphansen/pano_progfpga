@@ -3,13 +3,16 @@
 The progfpga_multiboot and progfpga_golden versions of progfpga also include a 
 large number of test command which can be run with a command line in the format of 
 ```
-./series2/lx150//progfpga_golden <Pano IP address> <test name>.
+./series2/lx150/progfpga_golden <Pano IP address> <test name>
 ```
 
-
+You can also use progfpga_golden for disovery by adding a dummy argument to the command line, it will not work with just a -d!
+```
+./series2/lx150/progfpga_golden -d dummy_argument
+```
 A version of the source from some/most/all of these test appear to be in [tnptest.cc](https://github.com/skiphansen/pano_progfpga/blob/master/archaeology/tnptest.cc)
 
-| Test | Function |
+| Test name | Function |
 | - | - | 
 |ddrDbgTest||
 |avgAccessTimeTest||
@@ -63,7 +66,7 @@ A version of the source from some/most/all of these test appear to be in [tnptes
 |spiUserErase||
 |spiledbutt||
 
-## test chipIdRd
+## chipIdRd
 
 The _chipIdRd_ command is extremely useful allows the board generation and revision to be determined interactively.
 
@@ -71,6 +74,16 @@ For example:
 
 This is a rev B Pano G2:
 ```
+skip@Dell-7040:~/pano/working/pano_progfpga$ ./series2/lx150//progfpga_golden -d dummy_argument
+Running Test = discover
+IP ADDRESS        SUBNET MASK       GATEWAY ADDRESS   MAC ADDRESS       REVISION
+192.168.123.118   255.255.255.0     192.168.123.1     00-1c-02-70-43-66 2049.20
+192.168.123.118   255.255.255.0     192.168.123.1     00-1c-02-70-43-66 2049.20
+192.168.123.118   255.255.255.0     192.168.123.1     00-1c-02-70-43-66 2049.20
+192.168.123.118   255.255.255.0     192.168.123.1     00-1c-02-70-43-66 2049.20
+192.168.123.118   255.255.255.0     192.168.123.1     00-1c-02-70-43-66 2049.20
+Test has PASSED
+skip@Dell-7040:~/pano/working/pano_progfpga$ ./series2/lx150//progfpga_golden 192.168.123.118 chipIdRd
 Running Test = chipIdRd
 Client connected : IP Addr = 192.168.123.118:8321
 READ CFG reg 0: 0x08010000
@@ -78,7 +91,17 @@ TESTING with board Type = SERIES_II
 FPGA Major Rev = 0801, Minor Rev = 0014
 READ @ 00000001: 0x08010014
 READ @ 00000010: 0x0000001c
-...
+READ @ 00000001: 0x08010014
+READ @ 00000010: 0x0000001c
+READ @ 00000001: 0x08010014
+READ @ 00000010: 0x0000001c
+READ @ 00000001: 0x08010014
+READ @ 00000010: 0x0000001c
+READ @ 00000001: 0x08010014
+READ @ 00000010: 0x0000001c
+Test has PASSED
+Disconnecting audio...
+Disconnected
 ```
 
 This is a rev B Pano G2:
@@ -105,9 +128,9 @@ READ @ 00000010: 0x00000019
 ...
 ```
 
-## test i2cEdidTest
+## i2cEdidTest
 
-The test reads the EIDD information of an attached monitor via I2C and dumps
+The _i2cEdidTest_ test reads the EIDD information of an attached monitor via I2C and dumps
 the contents.
 
 For example this is the results a DZ22-2
