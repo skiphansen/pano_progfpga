@@ -104,7 +104,7 @@ Disconnecting audio...
 Disconnected
 ```
 
-This is a rev B Pano G2:
+This is a rev C Pano G2:
 ```
 Running Test = chipIdRd
 Client connected : IP Addr = 192.168.123.206:8321
