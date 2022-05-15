@@ -25,7 +25,7 @@ A version of the source from some/most/all of these test appear to be in [tnptes
 |usbDevBasic||
 |usbIntrBasic||
 |i2cBasic||
-|i2cEdidTest| Dump EDID table of connected monitor |
+|[i2cEdidTest](https://github.com/skiphansen/pano_progfpga/blob/master/TestCommands.md#i2cEdidTest)| Dump EDID table of connected monitor |
 |setMacAddr||
 |setSpiLock||
 |spiBasicRd||
@@ -50,7 +50,7 @@ A version of the source from some/most/all of these test appear to be in [tnptes
 |oobBasic||
 |resetOutTest||
 |randnumgen||
-|chipIdRd| Read and display Board type, FPGA Major Major and Minor Rev |
+|[chipIdRd](https://github.com/skiphansen/pano_progfpga/blob/master/TestCommands.md#chipidrd)| Read and display Board type, FPGA Major Major and Minor Rev |
 |flashfpga||
 |flash_fpga_series_2||
 |flashlatestfpga||
