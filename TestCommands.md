@@ -177,6 +177,9 @@ I2C READ EDID Table @ offset 0000007c: 0xf6002020
 Test has PASSED
 ```
 
+This dump can easily edited and then decoded using [edid-decode](https://git.linuxtv.org/edid-decode.git) or
+other tools.  See this [page](https://github.com/skiphansen/panog2_dz22#edid-info) for an example.
+
 ## resetOutTest
 
 Resets the Pano causing the current bitstream to be reloaded?  Note this is NOT the same as a power on reset.
