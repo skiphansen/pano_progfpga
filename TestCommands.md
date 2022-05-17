@@ -72,18 +72,43 @@ The _chipIdRd_ command is extremely useful allows the board generation and revis
 
 For example:
 
-This is a rev B Pano G2:
+This is a Pano G1
+
 ```
 skip@Dell-7040:~/pano/working/pano_progfpga$ ./series2/lx150//progfpga_golden -d dummy_argument
 Running Test = discover
 IP ADDRESS        SUBNET MASK       GATEWAY ADDRESS   MAC ADDRESS       REVISION
-192.168.123.118   255.255.255.0     192.168.123.1     00-1c-02-70-43-66 2049.20
-192.168.123.118   255.255.255.0     192.168.123.1     00-1c-02-70-43-66 2049.20
-192.168.123.118   255.255.255.0     192.168.123.1     00-1c-02-70-43-66 2049.20
-192.168.123.118   255.255.255.0     192.168.123.1     00-1c-02-70-43-66 2049.20
-192.168.123.118   255.255.255.0     192.168.123.1     00-1c-02-70-43-66 2049.20
+192.168.123.213   255.255.255.0     192.168.123.1     00-1c-02-63-76-44 4.14
+192.168.123.213   255.255.255.0     192.168.123.1     00-1c-02-63-76-44 4.14
+192.168.123.213   255.255.255.0     192.168.123.1     00-1c-02-63-76-44 4.14
+192.168.123.213   255.255.255.0     192.168.123.1     00-1c-02-63-76-44 4.14
+192.168.123.213   255.255.255.0     192.168.123.1     00-1c-02-63-76-44 4.14
 Test has PASSED
-skip@Dell-7040:~/pano/working/pano_progfpga$ ./series2/lx150//progfpga_golden 192.168.123.118 chipIdRd
+skip@Dell-7040:~/pano/working/panog2_ldr/
+Running Test = chipIdRd
+Client connected : IP Addr = 192.168.123.213:8321
+READ CFG reg 0: 0x00050000
+TESTING with board Type = RevC
+FPGA Major Rev = 0004, Minor Rev = 000e
+READ @ 00000001: 0x0004000e
+READ @ 00000010: 0x0000001c
+...
+```
+
+Pano G1+
+```
+Running Test = chipIdRd
+Client connected : IP Addr = 192.168.123.142:8321
+READ CFG reg 0: 0x10010001
+This is an UNKOWN board, please verify the FPGA integrity
+FPGA Major Rev = 0881, Minor Rev = 0018
+READ @ 00000001: 0x08810018
+READ @ 00000010: 0x0000001c
+...
+```
+
+Pano G2, Rev B 
+```
 Running Test = chipIdRd
 Client connected : IP Addr = 192.168.123.118:8321
 READ CFG reg 0: 0x08010000
@@ -91,20 +116,10 @@ TESTING with board Type = SERIES_II
 FPGA Major Rev = 0801, Minor Rev = 0014
 READ @ 00000001: 0x08010014
 READ @ 00000010: 0x0000001c
-READ @ 00000001: 0x08010014
-READ @ 00000010: 0x0000001c
-READ @ 00000001: 0x08010014
-READ @ 00000010: 0x0000001c
-READ @ 00000001: 0x08010014
-READ @ 00000010: 0x0000001c
-READ @ 00000001: 0x08010014
-READ @ 00000010: 0x0000001c
-Test has PASSED
-Disconnecting audio...
-Disconnected
+...
 ```
 
-This is a rev C Pano G2:
+Pano G2, Rev C
 ```
 Running Test = chipIdRd
 Client connected : IP Addr = 192.168.123.206:8321
@@ -116,7 +131,7 @@ READ @ 00000010: 0x0000001c
 ...
 ```
 
-And this is a DZ22-2:
+DZ22-2
 ```
 Running Test = chipIdRd
 Client connected : IP Addr = 192.168.123.158:8321
