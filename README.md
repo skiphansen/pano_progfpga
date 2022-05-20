@@ -1,14 +1,17 @@
+**If you have a G2 you might want to checkout my [panog2_ldr](https://github.com/skiphansen/panog2_ldr)
+project before reading on.**
+
 ## Flashing Pano Logic devices without a programmer
 
 This project updates the Xilinx image embedded in the Panologic's progfpga 
-programmer utility with a new user provided image.  
+programmer utility with a new user provided image.
 
 Why?
 
 Using a JTAG or SPI programmer to update the flash in a Pano requires an 
 investment in a programmer and requires disassembling the Pano to gain 
 access to the programming connectors.  Sometimes a more convenient method 
-is handy.  
+is handy.
 
 If you are one of those that picked up a Pano but never got around to 
 doing anything with it now is your chance.  Dig your Pano out of your 
@@ -19,10 +22,10 @@ While a JTAG programmer is certainly a requirement for development
 progfpga provides a fast and easy way to load your latest creation on to a 
 Pano device for whatever reason.  
 
-Warning: No known images other than the original Pano Logic image 
-implement Pano's protocol so this is a one way update.  There is no way to 
-recover the Pano without a JTAG or SPI programmer after flashing a new 
-image.  
+**Warning:** No known images other than the original Pano Logic image 
+implement Pano's protocol so this is a one way update unless you
+install an image such as [panog2_ldr](https://github.com/skiphansen/panog2_ldr) 
+which supports future updates or use a JTAG programmer.
 
 ## What is a Pano Logic device and why do I care?
 
